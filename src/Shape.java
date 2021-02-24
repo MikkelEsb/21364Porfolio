@@ -14,4 +14,10 @@ public abstract class Shape {
     double getArea(){
         return 0;
     }
+    Point2D getCenter(){
+        return this.center;
+    }
+    double getCenterDistance(Shape otherShape){
+        return otherShape.center.distanceToPoint(this.center);
+    }
 }

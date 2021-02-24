@@ -7,7 +7,13 @@ public class Point2D {
         this.y=y;
     }
     //Calculate the euclidian distance to another 2D point
-    float distanceToPoint(Point2D other){
-        return 0;
+    double distanceToPoint(Point2D other){
+        return Math.sqrt((other.getX()-this.getX())^2+(other.getY()-this.y)^2);
+    }
+    public int getX() {
+        return x;
+    }
+    public int getY() {
+        return y;
     }
 }
