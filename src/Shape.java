@@ -2,17 +2,15 @@ public abstract class Shape {
     ShapeType type;
     Point2D center;
 
-    Shape(int x, int y){
+    Shape(int x, int y,ShapeType shapeType){
+        this.type=shapeType;
         center=new Point2D(x,y);
     }
-    Shape(Point2D centerPoint){
+    Shape(Point2D centerPoint,ShapeType shapeType){
         this.center=centerPoint;
     }
     ShapeType getType(){
         return this.type;
-    }
-    double getArea(){
-        return 0;
     }
     Point2D getCenter(){
         return this.center;

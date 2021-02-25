@@ -1,11 +1,10 @@
 public class Circle extends Shape{
-    double radius;
+    private double radius;
     Circle(int x, int y, double radius) {
-        super(x, y);
+        super(x, y,ShapeType.CIRCLE);
         this.radius=radius;
     }
 
-    @Override
     public double getArea() {
         return Math.PI*radius*radius;
     }
