@@ -2,7 +2,7 @@ public abstract class Shape {
     ShapeType type;
     Point2D center;
 
-    Shape(int x, int y,ShapeType shapeType){
+    Shape(double x, double y,ShapeType shapeType){
         this.type=shapeType;
         center=new Point2D(x,y);
     }
