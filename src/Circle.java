@@ -1,6 +1,6 @@
 public class Circle extends Shape{
     private double radius;
-    Circle(int x, int y, double radius) {
+    Circle(double x, double y, double radius) {
         super(x, y,ShapeType.CIRCLE);
         this.radius=radius;
     }
