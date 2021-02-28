@@ -18,4 +18,8 @@ public class TriangleTest {
         assertEquals(3.4142135623730950488016887242097d,triangleA.getPerimeter());
     }
 
+    @Test
+    void shapeType(){
+        assertEquals(ShapeType.TRIANGLE,triangleA.getType());
+    }
 }

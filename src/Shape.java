@@ -7,6 +7,7 @@ public abstract class Shape {
         center=new Point2D(x,y);
     }
     Shape(Point2D centerPoint,ShapeType shapeType){
+        this.type=shapeType;
         this.center=centerPoint;
     }
     ShapeType getType(){

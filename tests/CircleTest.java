@@ -38,6 +38,10 @@ public class CircleTest {
     void circlePerimeter(){
         assertEquals(12.566370614359172953850573533118d,circleA.getCircumference());
     }
+    @Test
+    void shapeType(){
+        assertEquals(circleA.getType(),ShapeType.CIRCLE);
+    }
 
 
 }
