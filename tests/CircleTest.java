@@ -31,6 +31,10 @@ public class CircleTest {
         assertEquals(circleA.getCenterDistance(circleB),1.4142135623730950488016887242097d);
     }
     @Test
+    void circleRadius(){
+        assertEquals(2d,circleA.getRadius());
+    }
+    @Test
     void circleArea(){
         assertEquals(12.566370614359172953850573533118d,circleA.getArea());
     }
