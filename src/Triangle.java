@@ -29,6 +29,28 @@ public class Triangle extends Shape{
         return Math.sqrt(semiPerim*(semiPerim-AB)*(semiPerim-AC)*(semiPerim-BC));
     }
 
+    //alternative method for calculating area from points
+    //https://en.wikipedia.org/wiki/Triangle#Using_coordinates
+    //Also known as Shoelace formula https://en.wikipedia.org/wiki/Shoelace_formula#Proof_for_a_triangle
+    double getAreaFromPoints(Point2D A, Point2D B, Point2D C){
+        return Math.abs(
+                (A.getX()*(B.getY()-C.getY())   // (Ax*(By-Cy)+
+                +B.getX()*(C.getY()-A.getY())   //  Bx*(Cy-Ay)+
+                +C.getX()*(A.getY()-B.getY()))  //  Cx*(Ay-By))
+                /2.0);                          // /2
+    }
+    boolean isPointInTriangle(Point2D P){
+        //Area of our triangle
+        double ABC=getAreaFromPoints(A,B,C);
+        //3 triangles area, made of the point and two other points of our triangle
+        double PBC=getAreaFromPoints(P,B,C);
+        double PAC=getAreaFromPoints(P,A,C);
+        double PAB=getAreaFromPoints(P,A,B);
+
+        //Compare the values
+        return (ABC==PBC+PAC+PAB);
+
+    }
     public double getPerimeter() {
         return perimeter;
     }
