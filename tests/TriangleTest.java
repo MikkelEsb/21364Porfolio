@@ -14,6 +14,10 @@ public class TriangleTest {
         assertEquals(0.5d,triangleA.getArea(),0.000000001d);
     }
     @Test
+    void triangleAreaTwo(){
+        assertEquals(0.5d,triangleA.getAreaTwo());
+    }
+    @Test
     void triangleSecondaryArea(){
         assertEquals(0.5d,triangleA.getAreaFromPoints(new Point2D(0,0),new Point2D(1,0),new Point2D(1,1)));
     }

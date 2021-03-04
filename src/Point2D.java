@@ -6,7 +6,7 @@ public class Point2D {
         this.x=x;
         this.y=y;
     }
-    //Calculate the euclidian distance to another 2D point
+    //Calculate the euclidean distance to another 2D point
     double distanceToPoint(Point2D other){
         return Math.sqrt(Math.pow(other.getX()-this.getX(),2)+Math.pow((other.getY()-this.getY()),2));
     }
