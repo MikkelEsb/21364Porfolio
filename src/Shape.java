@@ -10,6 +10,12 @@ public abstract class Shape {
         this.type=shapeType;
         this.center=centerPoint;
     }
+    Shape(ShapeType shapeType){
+        this.type=shapeType;
+    }
+    void setCenter(Point2D cent){
+        center=cent;
+    }
     ShapeType getType(){
         return this.type;
     }

@@ -6,7 +6,8 @@ public class Triangle extends Shape{
     //A triangle can be defined multiple ways, let's start with 3 points in 2 dimensions
     Triangle(Point2D A, Point2D B, Point2D C){
         //Since our shape class needs a center we calculate the centroid and constructs from the super.
-        super(new Point2D((A.getX()+B.getX()+C.getX())/3,(A.getY()+B.getY()+C.getY())/3),ShapeType.TRIANGLE);
+        super(ShapeType.TRIANGLE);
+        this.setCenter(generateCentroidForThreePoints(A,B,C));
         //Once constructed from the super we save each points to this triangle and calculate the distances of the lengths
         this.A=A;
         this.B=B;
