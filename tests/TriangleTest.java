@@ -11,16 +11,9 @@ public class TriangleTest {
     }
     @Test
     void triangleArea(){
-        assertEquals(0.5d,triangleA.getArea(),0.000000001d);
+        assertEquals(0.5d,triangleA.getArea());
     }
-    @Test
-    void triangleAreaTwo(){
-        assertEquals(0.5d,triangleA.getAreaTwo());
-    }
-    @Test
-    void triangleSecondaryArea(){
-        assertEquals(0.5d,triangleA.getAreaFromPoints(new Point2D(0,0),new Point2D(1,0),new Point2D(1,1)));
-    }
+
     @Test
     void pointInTriangle(){
         assertTrue(triangleA.isPointInTriangle(triangleA.getCenter()));
