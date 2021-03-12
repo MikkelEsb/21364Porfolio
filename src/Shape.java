@@ -30,6 +30,11 @@ public abstract class Shape {
     abstract boolean containsPoint(Point2D p);
     abstract void rotate(double radians);
     abstract void translate(double deltaX, double deltaY);
+
+    abstract double getMinX();
+    abstract double getMaxX();
+    abstract double getMinY();
+    abstract double getMaxY();
     Point2D rotateAroundPoint(double rad,Point2D origin,Point2D point){
         double cos = Math.cos(rad);
         double sin = Math.sin(rad);

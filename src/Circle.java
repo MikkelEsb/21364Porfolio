@@ -28,4 +28,21 @@ public class Circle extends Shape{
     void translate(double deltaX, double deltaY){
 
     }
+
+    double getMinX() {
+        return this.getCenter().getX()-radius;
+    }
+
+    double getMaxX() {
+        return this.getCenter().getX()+radius;
+    }
+
+
+    double getMinY() {
+        return this.getCenter().getY()-radius;
+    }
+    double getMaxY() {
+        return this.getCenter().getY()+radius;
+    }
+
 }

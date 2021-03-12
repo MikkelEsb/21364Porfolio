@@ -30,4 +30,20 @@ public class Square extends Shape{
     void translate(double deltaX, double deltaY){
 
     }
+
+    double getMinX() {
+        return 0;
+    }
+
+    double getMaxX() {
+        return 0;
+    }
+
+    double getMinY() {
+        return 0;
+    }
+
+    double getMaxY() {
+        return 0;
+    }
 }
