@@ -16,4 +16,8 @@ public class Point2D {
     public double getY() {
         return y;
     }
+    void translate(double dX,double dY){
+        this.x+=dX;
+        this.y+=dY;
+    }
 }

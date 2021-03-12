@@ -28,12 +28,16 @@ public abstract class Shape {
     abstract double getArea();
     abstract double getPerimeter();
     abstract boolean containsPoint(Point2D p);
-
-    /* Future methods
-    void translateShape(double deltaX,double deltaY){
-
+    abstract void rotate(double radians);
+    abstract void translate(double deltaX, double deltaY);
+    Point2D rotateAroundPoint(double rad,Point2D origin,Point2D point){
+        double cos = Math.cos(rad);
+        double sin = Math.sin(rad);
+        double relX = point.getX()-origin.getX();
+        double relY = point.getX()-origin.getY();
+        double newX = relX*cos - relY*sin + origin.getX();
+        double newY = relX*sin + relY*cos + origin.getY();
+        return new Point2D(newX,newY);
     }
-    void rotateShape(double radians){
 
-    }*/
 }

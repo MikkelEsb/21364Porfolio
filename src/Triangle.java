@@ -1,22 +1,22 @@
 public class Triangle extends Shape{
-    private final Point2D A;
-    private final Point2D B;
-    private final Point2D C;
+    private Point2D A;
+    private Point2D B;
+    private Point2D C;
 
     //A triangle can be defined multiple ways, let's start with 3 points in 2 dimensions
     Triangle(Point2D A, Point2D B, Point2D C){
         //Since our shape class needs a center we calculate the centroid and constructs from the super.
         super(ShapeType.TRIANGLE);
-        this.setCenter(generateCentroidForThreePoints(A,B,C));
-        //Once constructed from the super we save each points to this triangle and calculate the distances of the lengths
         this.A=A;
         this.B=B;
         this.C=C;
+        this.setCenter(generateCentroid());
+
 
 
 
     }
-    private Point2D generateCentroidForThreePoints(Point2D A, Point2D B, Point2D C){
+    private Point2D generateCentroid(){
         return new Point2D((A.getX()+B.getX()+C.getX())/3,(A.getY()+B.getY()+C.getY())/3);
     }
 
@@ -59,4 +59,20 @@ public class Triangle extends Shape{
         return A.distanceToPoint(B) + A.distanceToPoint(C)+B.distanceToPoint(C);
     }
 
+    @Override
+    void rotate(double radians){
+        //Rotate each point around our center
+        A=rotateAroundPoint(radians,this.getCenter(),A);
+        B=rotateAroundPoint(radians,this.getCenter(),B);
+        C=rotateAroundPoint(radians,this.getCenter(),C);
+        this.setCenter(generateCentroid());
+
+    }
+
+    void translate(double deltaX, double deltaY){
+        //Move each point by dX and dY
+        A.translate(deltaX,deltaY);
+        B.translate(deltaX,deltaY);
+        C.translate(deltaX,deltaY);
+    }
 }

@@ -21,4 +21,11 @@ public class Circle extends Shape{
     boolean containsPoint(Point2D point){
         return point.distanceToPoint(this.getCenter())<=this.radius;
     }
+
+    void rotate(double radians){ //Doesn't make sense to rotate a circle ;)
+
+    }
+    void translate(double deltaX, double deltaY){
+
+    }
 }

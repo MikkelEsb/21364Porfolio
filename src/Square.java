@@ -19,4 +19,15 @@ public class Square extends Shape{
     }
 
 
+    /**
+     * @param radians amount of radians to rotate the square around it's center
+     */
+    @Override
+    void rotate(double radians){
+
+    }
+
+    void translate(double deltaX, double deltaY){
+
+    }
 }
