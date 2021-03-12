@@ -43,7 +43,7 @@ public class Triangle extends Shape{
                 +C.getX()*(A.getY()-B.getY()))  //  Cx*(Ay-By))
                 /2);                          // /2
     }
-    boolean isPointInTriangle(Point2D P){
+    boolean containsPoint(Point2D P){
         //Area of our triangle
         double ABC=getAreaFromPoints(A,B,C);
         //3 triangles area, made of the point and two other points of our triangle

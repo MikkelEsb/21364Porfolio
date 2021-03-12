@@ -16,9 +16,9 @@ public class TriangleTest {
 
     @Test
     void pointInTriangle(){
-        assertTrue(triangleA.isPointInTriangle(triangleA.getCenter()));
-        assertTrue(triangleA.isPointInTriangle(new Point2D(0,0)));
-        assertFalse(triangleA.isPointInTriangle(new Point2D(-0.00001,0)));
+        assertTrue(triangleA.containsPoint(triangleA.getCenter()));
+        assertTrue(triangleA.containsPoint(new Point2D(0,0)));
+        assertFalse(triangleA.containsPoint(new Point2D(-0.00001,0)));
     }
 
     @Test

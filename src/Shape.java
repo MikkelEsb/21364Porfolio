@@ -25,4 +25,15 @@ public abstract class Shape {
     double getCenterDistance(Shape otherShape){
         return otherShape.center.distanceToPoint(this.center);
     }
+    abstract double getArea();
+    abstract double getPerimeter();
+    abstract boolean containsPoint(Point2D p);
+
+    /* Future methods
+    void translateShape(double deltaX,double deltaY){
+
+    }
+    void rotateShape(double radians){
+
+    }*/
 }

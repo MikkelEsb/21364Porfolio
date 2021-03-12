@@ -13,15 +13,15 @@ public class CircleTest {
     void pointInCircle(){
         //Point inside
         Point2D pointInside = new Point2D(1.5,2);
-        assertTrue(circleA.isPointInCircle(pointInside));
+        assertTrue(circleA.containsPoint(pointInside));
 
         //Point on perimeter
         Point2D pointOnEdge = new Point2D(1,3);
-        assertTrue(circleA.isPointInCircle(pointOnEdge));
+        assertTrue(circleA.containsPoint(pointOnEdge));
 
         //Point outside
         Point2D pointOutside = new Point2D(1,3.001);
-        assertFalse(circleA.isPointInCircle(pointOutside));
+        assertFalse(circleA.containsPoint(pointOutside));
 
     }
     @Test
@@ -40,7 +40,7 @@ public class CircleTest {
     }
     @Test
     void circlePerimeter(){
-        assertEquals(12.566370614359172953850573533118d,circleA.getCircumference());
+        assertEquals(12.566370614359172953850573533118d,circleA.getPerimeter());
     }
     @Test
     void shapeType(){

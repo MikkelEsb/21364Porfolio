@@ -13,5 +13,10 @@ public class Square extends Shape{
         return Math.abs(cornerA.getX()-cornerB.getX())*2+Math.abs(cornerA.getY()-cornerB.getY())*2;
     }
 
+    @Override
+    boolean containsPoint(Point2D p) {
+        return false;
+    }
+
 
 }

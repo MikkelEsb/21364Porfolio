@@ -9,14 +9,16 @@ public class Circle extends Shape{
         return Math.PI*radius*radius;
     }
 
+
+
     public double getRadius() {
         return radius;
     }
 
-    public double getCircumference(){
+    public double getPerimeter(){
         return 2*Math.PI*radius;
     }
-    public boolean isPointInCircle(Point2D point){
+    boolean containsPoint(Point2D point){
         return point.distanceToPoint(this.getCenter())<=this.radius;
     }
 }
