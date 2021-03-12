@@ -9,6 +9,9 @@ public class Square extends Shape{
     double getArea(){
         return Math.abs(cornerA.getX()-cornerB.getX())*Math.abs(cornerA.getY()-cornerB.getY());
     }
+    double getPerimeter(){
+        return Math.abs(cornerA.getX()-cornerB.getX())*2+Math.abs(cornerA.getY()-cornerB.getY())*2;
+    }
 
 
 }
