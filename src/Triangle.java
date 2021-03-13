@@ -91,4 +91,13 @@ public class Triangle extends Shape{
     double getMaxY() {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Triangle{" +
+                "A=" + A +
+                ", B=" + B +
+                ", C=" + C +
+                '}';
+    }
 }

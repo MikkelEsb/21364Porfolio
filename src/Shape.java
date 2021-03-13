@@ -39,9 +39,10 @@ public abstract class Shape {
         double cos = Math.cos(rad);
         double sin = Math.sin(rad);
         double relX = point.getX()-origin.getX();
-        double relY = point.getX()-origin.getY();
+        double relY = point.getY()-origin.getY();
         double newX = relX*cos - relY*sin + origin.getX();
         double newY = relX*sin + relY*cos + origin.getY();
+        //System.out.println("cos: " + cos + ", sin: " + sin + "\nNew point at: (" + newX + ","+newY+")");
         return new Point2D(newX,newY);
     }
 
