@@ -58,9 +58,9 @@ public class Triangle extends Shape{
     @Override
     void rotate(double radians){
         //Rotate each point around our center
-        A=rotateAroundPoint(radians,this.getCenter(),A);
-        B=rotateAroundPoint(radians,this.getCenter(),B);
-        C=rotateAroundPoint(radians,this.getCenter(),C);
+        A=A.getRotatedPoint(radians,this.getCenter());
+        B=B.getRotatedPoint(radians,this.getCenter());
+        C=C.getRotatedPoint(radians,this.getCenter());
         this.setCenter(generateCentroid());
 
     }

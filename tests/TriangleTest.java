@@ -31,7 +31,7 @@ public class TriangleTest {
         Point2D cent= new Point2D(0,0);
         Point2D testA = new Point2D(1,0);
         //Rotate 90 degrees left along unitcircle around center, our x should be 0 and y should be 1
-        Point2D tempPoint=triangleA.rotateAroundPoint(Math.PI/2,cent,testA);
+        Point2D tempPoint=testA.getRotatedPoint(Math.PI/2,cent);
         assertEquals(0d,tempPoint.getX(),Math.pow(10,-16));
         assertEquals(1d,tempPoint.getY(),Math.pow(10,-16));
         //Allowing 10^-16 error rate
