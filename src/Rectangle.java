@@ -1,6 +1,7 @@
 public class Rectangle extends Shape{
     //We can define a rectangle by two opposite points.
     Point2D cornerA,cornerB;
+    //For rotation we will rotate the shape around it's center but save the rotation done for containsPoint calculation
     double rotation=0d;
 
     /**
@@ -25,7 +26,13 @@ public class Rectangle extends Shape{
 
     @Override
     boolean containsPoint(Point2D p) {
-        return false;
+        Point2D tempPoint=p;
+        if (rotation!=0){//Rotate point around center
+            tempPoint=p.getRotatedPoint(-rotation,this.getCenter());
+        }
+        //tempPoint.getX()>=this.getMinX() && tempPoint.getX() <=
+
+        return tempPoint.getX() >= this.getMinX() && tempPoint.getX() <= this.getMaxX() && tempPoint.getY() >= this.getMinY() && tempPoint.getY() <= this.getMaxY();
     }
 
 
