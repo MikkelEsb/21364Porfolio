@@ -31,6 +31,15 @@ public class CircleTest {
         assertEquals(circleA.getCenterDistance(circleB),1.4142135623730950488016887242097d);
     }
     @Test
+    void translate(){
+        circleA.translate(-3,0);
+        //The center should be moved to -2,1 with radius of 2
+        //Testing if perimeter of circle is correctly moved
+        assertTrue(circleA.containsPoint(new Point2D(-4,1)));
+        assertFalse(circleA.containsPoint(new Point2D(1,1)));
+        circleA.rotate(0); //Bad practice but just calling this for code coverage ;)
+    }
+    @Test
     void circleRadius(){
         assertEquals(2d,circleA.getRadius());
     }

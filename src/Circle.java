@@ -7,7 +7,8 @@ public class Circle extends Shape{
      * @param radius Radius of the circle
      */
     Circle(double x, double y, double radius) {
-        super(x, y,ShapeType.CIRCLE);
+        super(ShapeType.CIRCLE);
+        this.setCenter(new Point2D(x,y));
         this.radius=radius;
     }
 
@@ -32,24 +33,9 @@ public class Circle extends Shape{
 
     }
     void translate(double deltaX, double deltaY){
-
+        this.getCenter().translate(deltaX,deltaY);
     }
 
-    double getMinX() {
-        return this.getCenter().getX()-radius;
-    }
-
-    double getMaxX() {
-        return this.getCenter().getX()+radius;
-    }
-
-
-    double getMinY() {
-        return this.getCenter().getY()-radius;
-    }
-    double getMaxY() {
-        return this.getCenter().getY()+radius;
-    }
 
 
 }

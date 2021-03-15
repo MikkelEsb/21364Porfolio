@@ -48,5 +48,10 @@ public class RectangleTest {
         assertFalse(rectangleA.containsPoint(new Point2D(2,2)));
 
     }
+    @Test
+    void translate(){
+        rectangleA.translate(2,2);
+        assertTrue(rectangleA.containsPoint(new Point2D(2,2)));
+    }
 
 }

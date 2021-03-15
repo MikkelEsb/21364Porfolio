@@ -61,7 +61,9 @@ public class Rectangle extends Shape{
     }
 
     void translate(double deltaX, double deltaY){
-
+        this.cornerA.translate(deltaX,deltaY);
+        this.cornerB.translate(deltaX,deltaY);
+        this.getCenter().translate(deltaX,deltaY);
     }
     private boolean hasExtraCorners(){
         return cornerC!=null;

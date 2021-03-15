@@ -45,6 +45,13 @@ public class TriangleTest {
         assertEquals(3.4142135623730950488016887242097d,triangleA.getPerimeter());
 
     }
+    @Test
+    void translate(){
+        triangleA.translate(1,-1);
+        System.out.println(triangleA.toString());
+        assertTrue(triangleA.containsPoint(new Point2D(1.5,-0.5)));
+
+    }
 
     @Test
     void shapeType(){

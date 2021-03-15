@@ -71,24 +71,6 @@ public class Triangle extends Shape{
         B.translate(deltaX,deltaY);
         C.translate(deltaX,deltaY);
     }
-
-    double getMinX() {
-        return 0;
-    }
-
-    double getMaxX() {
-        return 0;
-    }
-
-    double getMinY() {
-        return 0;
-    }
-
-    double getMaxY() {
-        return 0;
-    }
-
-
     @Override
     public String toString() {
         return "Triangle{" +
