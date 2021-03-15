@@ -1,3 +1,3 @@
 public enum ShapeType {
-    CIRCLE,SQUARE,TRIANGLE
+    CIRCLE, RECTANGLE,TRIANGLE
 }

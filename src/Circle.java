@@ -1,5 +1,11 @@
 public class Circle extends Shape{
     private double radius;
+
+    /**
+     * @param x X coordinate for the center of the circle
+     * @param y Y coordinate for the center of the circle
+     * @param radius Radius of the circle
+     */
     Circle(double x, double y, double radius) {
         super(x, y,ShapeType.CIRCLE);
         this.radius=radius;
@@ -43,6 +49,11 @@ public class Circle extends Shape{
     }
     double getMaxY() {
         return this.getCenter().getY()+radius;
+    }
+
+    boolean possibleIntersection(Shape otherShape) {
+
+        return false;
     }
 
 }

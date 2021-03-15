@@ -11,10 +11,6 @@ public class Triangle extends Shape{
         this.B=B;
         this.C=C;
         this.setCenter(generateCentroid());
-
-
-
-
     }
     private Point2D generateCentroid(){
         return new Point2D((A.getX()+B.getX()+C.getX())/3,(A.getY()+B.getY()+C.getY())/3);
@@ -90,6 +86,11 @@ public class Triangle extends Shape{
 
     double getMaxY() {
         return 0;
+    }
+
+    @Override
+    boolean possibleIntersection(Shape otherShape) {
+        return false;
     }
 
     @Override

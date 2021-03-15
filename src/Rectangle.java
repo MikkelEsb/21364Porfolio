@@ -1,8 +1,13 @@
-public class Square extends Shape{
-    //We can define a square by two opposite points.
+public class Rectangle extends Shape{
+    //We can define a rectangle by two opposite points.
     Point2D cornerA,cornerB;
-    Square(Point2D pointA,Point2D pointB) {
-        super(new Point2D((pointA.getX()+pointB.getX())/2,(pointA.getY()+pointB.getY())/2), ShapeType.SQUARE);
+
+    /**
+     * @param pointA One corner of the rectangle
+     * @param pointB Opposite corner of the rectangle
+     */
+    Rectangle(Point2D pointA, Point2D pointB) {
+        super(new Point2D((pointA.getX()+pointB.getX())/2,(pointA.getY()+pointB.getY())/2), ShapeType.RECTANGLE);
         cornerA=pointA;
         cornerB=pointB;
     }
@@ -45,5 +50,10 @@ public class Square extends Shape{
 
     double getMaxY() {
         return 0;
+    }
+
+    @Override
+    boolean possibleIntersection(Shape otherShape) {
+        return false;
     }
 }
