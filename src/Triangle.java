@@ -88,10 +88,6 @@ public class Triangle extends Shape{
         return 0;
     }
 
-    @Override
-    boolean possibleIntersection(Shape otherShape) {
-        return false;
-    }
 
     @Override
     public String toString() {

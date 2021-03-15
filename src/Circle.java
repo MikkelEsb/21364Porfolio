@@ -51,9 +51,5 @@ public class Circle extends Shape{
         return this.getCenter().getY()+radius;
     }
 
-    boolean possibleIntersection(Shape otherShape) {
-
-        return false;
-    }
 
 }

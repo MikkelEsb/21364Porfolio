@@ -53,12 +53,6 @@ public abstract class Shape {
      */
     abstract void translate(double deltaX, double deltaY);
 
-    abstract double getMinX();
-    abstract double getMaxX();
-    abstract double getMinY();
-    abstract double getMaxY();
-    abstract boolean possibleIntersection(Shape otherShape);
-
 
 
 }
