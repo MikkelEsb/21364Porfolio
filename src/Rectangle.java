@@ -1,9 +1,9 @@
 public class Rectangle extends Shape{
     //We can define a rectangle by two opposite points.
-    Point2D cornerA,cornerB;
+    private Point2D cornerA,cornerB;
     //For rotation we will rotate the shape around it's center but save the rotation done for containsPoint calculation
-    double rotation=0d;
-    Point2D cornerC,cornerD;
+    private double rotation=0d;
+    private Point2D cornerC,cornerD;
 
     /**
      * @param pointA One corner of the rectangle
